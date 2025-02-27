@@ -2,10 +2,22 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  css: ["~~/assets/main.css"],
   modules: ["@nuxtjs/tailwindcss"],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
-    // and more...
+    config: {
+      theme: {
+        extend: {
+          fontFamily: {
+            antonio: ["Antonio"],
+            patua: ["Patua One"],
+            figtree: ["Figtree"],
+            bebas: ["Bebas Neue"],
+          },
+        },
+      },
+    },
   },
 });
