@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-svh bg-rose-50">
-    <header class="px-14 py-9 flex justify-between">
+    <header class="px-4 md:px-14 py-9 flex justify-between">
       <div class="text-4xl font-bebas">
         the<br />
         swedish<br />
@@ -8,7 +8,7 @@
       </div>
       <nav>
         <button
-          class="md:hidden fixed z-50 right-10"
+          class="md:hidden fixed z-50 right-3 md:right-10"
           @click="showMenu = !showMenu"
           :class="{ 'text-rose-50': showMenu }"
         >
@@ -22,21 +22,12 @@
           :class="{ 'hidden md:flex': !showMenu }"
         >
           <li v-for="item in menu" :key="item.name">
-            <nuxt-link
-              :to="item.path"
-              :class="'hover:text-rose-50 text-[2.5rem] font-antonio text-rose-50 md:text-black cursor-pointer hover:border-b-4 border-rose-950 relative group'"
-              active-class="text-rose-950 border-b-4"
-            >
-              <span class="relative z-10">{{ item.name }}</span>
-              <div
-                class="absolute bg-rose-400 inset-0 scale-y-0 transition-all group-hover:scale-y-100 origin-bottom"
-              ></div>
-            </nuxt-link>
+            <NavLink :path="item.path">{{ item.name }}</NavLink>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="px-14 py-9 grid gap-10">
+    <main class="px-4 md:px-14 py-9 grid gap-44">
       <slot />
     </main>
   </div>
