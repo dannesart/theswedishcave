@@ -82,9 +82,12 @@
         <Card v-for="item in memes" :key="item.title">
           <template #image>
             <div
-              class="rounded-xl h-full overflow-hidden flex justify-center items-center bg-black"
+              class="rounded-xl h-full overflow-hidden flex justify-center items-center bg-black group cursor-pointer"
             >
-              <img :src="item.image" class="object-cover w-full h-full" />
+              <img
+                :src="item.image"
+                class="h-full group-hover:scale-125 transition-transform"
+              />
             </div>
           </template>
           <template #title> {{ item.title }} </template>
@@ -119,6 +122,13 @@ const offering = [
     icon: "lucide:biceps-flexed",
     path: "/heavy-stuff",
   },
+  {
+    title: "Holding hands",
+    description:
+      "Some of our cavemens are smart and some are strong. Let them do the heavy work",
+    icon: "lucide:handshake",
+    path: "/heavy-stuff",
+  },
 ];
 
 const tales = [
@@ -139,6 +149,13 @@ const tales = [
     description:
       "Some of our cavemens are smart and some are strong. Let them do the heavy work",
     icon: "lucide:fish",
+    path: "/heavy-stuff",
+  },
+  {
+    title: "Holding hands",
+    description:
+      "Some of our cavemens are smart and some are strong. Let them do the heavy work",
+    icon: "lucide:handshake",
     path: "/heavy-stuff",
   },
 ];

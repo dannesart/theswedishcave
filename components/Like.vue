@@ -1,8 +1,9 @@
 <template>
-  <div class="flex items-center gap-3 p-4">
+  <div class="flex items-center gap-3">
     <button
       @click="like"
-      class="flex justify-center items-center"
+      class="flex justify-center items-center p-5 rounded-full"
+      v-wave
       :class="{
         'text-rose-950': liked,
         'text-black': !liked,
@@ -10,12 +11,13 @@
     >
       <Icon :name="'lucide:hand-metal'" size="30" />
     </button>
-    <span class="text-xl font-bebas w-6 flex justify-center">
+    <span class="text-xl font-bebas w-3 flex justify-center">
       {{ sum }}
     </span>
     <button
       @click="dislike"
-      class="flex justify-center items-center"
+      v-wave
+      class="flex justify-center items-center p-5 rounded-full"
       :class="{
         'text-rose-950': disliked,
         'text-black': !disliked,

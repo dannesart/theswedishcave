@@ -7,7 +7,7 @@
       </div>
       <div class="w-[1px] flex-1 bg-black"></div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-4 flex-1 gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 flex-1 gap-10">
       <slot />
     </div>
   </div>
