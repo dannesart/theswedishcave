@@ -8,7 +8,7 @@
       </div>
       <nav>
         <button
-          class="md:hidden fixed z-10 right-10"
+          class="md:hidden fixed z-50 right-10"
           @click="showMenu = !showMenu"
           :class="{ 'text-rose-50': showMenu }"
         >
@@ -18,7 +18,7 @@
           />
         </button>
         <ul
-          class="flex flex-col md:flex-row p-20 md:p-0 gap-10 bg-black inset-0 fixed md:bg-transparent md:relative"
+          class="flex flex-col md:flex-row p-20 md:p-0 gap-10 bg-black inset-0 z-40 fixed md:bg-transparent md:relative"
           :class="{ 'hidden md:flex': !showMenu }"
         >
           <li v-for="item in menu" :key="item.name">

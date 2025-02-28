@@ -12,6 +12,10 @@
     <slot />
     <div v-if="underline" class="h-1 w-10 bg-black"></div>
   </h3>
+  <h3 v-if="size === 4" class="font-bebas text-4xl">
+    <slot />
+    <div v-if="underline" class="h-1 w-10 bg-black"></div>
+  </h3>
 </template>
 
 <script setup lang="ts">
