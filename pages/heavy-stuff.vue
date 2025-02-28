@@ -1,8 +1,10 @@
 <template>
   <NuxtLayout>
-    <h1 class="font-bebas text-9xl mb-36">
+    <Headline :size="1">
       Let us
-      <span class="font-antonio text-8xl block mb-7">Do the heavy lifting</span>
-    </h1>
+      <span class="font-antonio text-5xl md:text-8xl block mb-9"
+        >Do the heavy lifting</span
+      >
+    </Headline>
   </NuxtLayout>
 </template>

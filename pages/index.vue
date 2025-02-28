@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout>
-    <section>
+    <section class="relative flex">
       <Headline :size="1">
-        Creating experiences
+        <span> Creating experiences </span>
         <span class="font-antonio text-5xl md:text-8xl block mb-9"
           >For your stone age brand.</span
         >
@@ -12,6 +12,10 @@
           for guidance through space & time.
         </span>
       </Headline>
+
+      <div class="hidden md:flex flex-1 justify-center items-center">
+        <Icon :name="'lucide:rocket'" :size="200" />
+      </div>
     </section>
 
     <section class="grid gap-12">
@@ -40,12 +44,12 @@
       </List>
     </section>
 
-    <section class="grid gap-12 bg-amber-50 -mx-14 p-14">
+    <section class="grid gap-12 bg-amber-50 -mx-4 md:-mx-14 p-4 md:p-14">
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Campfire</Headline>
         <Headline :size="3"
-          >Some of our breathtaking campfire tales. Told by some old and wise
-          cavemen.</Headline
+          >Some of our breathtaking campfire tales. Told by some of our oldest
+          and wisest.</Headline
         >
       </div>
       <List :icon="'lucide:flame'">
@@ -63,6 +67,31 @@
           </template>
           <template #title> {{ item.title }} </template>
           <p>{{ item.description }}</p>
+        </Card>
+      </List>
+    </section>
+
+    <section class="grid gap-12">
+      <div class="grid gap-8">
+        <Headline :size="2" :underline="true">Memes</Headline>
+        <Headline :size="3"
+          >Just here for the memes aren't ya? We got you.</Headline
+        >
+      </div>
+      <List :icon="'lucide:drama'">
+        <Card v-for="item in memes" :key="item.title">
+          <template #image>
+            <div
+              class="rounded-xl h-full overflow-hidden flex justify-center items-center bg-black"
+            >
+              <img :src="item.image" class="object-cover w-full h-full" />
+            </div>
+          </template>
+          <template #title> {{ item.title }} </template>
+          <p>{{ item.description }}</p>
+          <div class="flex justify-end">
+            <Like />
+          </div>
         </Card>
       </List>
     </section>
@@ -111,6 +140,29 @@ const tales = [
       "Some of our cavemens are smart and some are strong. Let them do the heavy work",
     icon: "lucide:fish",
     path: "/heavy-stuff",
+  },
+];
+
+const memes = [
+  {
+    title: "Rock rock rock",
+    description: "",
+    image: "rock-rock-rock.jpg",
+  },
+  {
+    title: "This is the way",
+    description: "",
+    image: "guidance.jpg",
+  },
+  {
+    title: "Damn I'm old",
+    description: "",
+    image: "ps3.webp",
+  },
+  {
+    title: "Learn the hard way",
+    description: "",
+    image: "cut-open-head.webp",
   },
 ];
 </script>
