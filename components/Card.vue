@@ -14,9 +14,15 @@
     <NuxtLink
       v-if="link"
       :to="link.path"
-      :class="'text-xl flex items-center gap-2 font-antonio'"
-      >{{ link.label }}
-      <Icon name="lucide:arrow-right" size="30" />
+      :class="'text-xl inline-flex max-w-fit flex-col gap-2 font-antonio group'"
+    >
+      <div class="flex items-center gap-2">
+        {{ link.label }}
+        <Icon name="lucide:arrow-right" size="30" />
+      </div>
+      <div
+        class="h-1 w-full bg-black scale-x-0 group-hover:scale-100 transition-transform origin-left"
+      ></div>
     </NuxtLink>
   </article>
 </template>
