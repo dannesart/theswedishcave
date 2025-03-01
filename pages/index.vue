@@ -81,14 +81,7 @@
       <List :icon="'lucide:drama'">
         <Card v-for="item in memes" :key="item.title">
           <template #image>
-            <div
-              class="rounded-xl h-full overflow-hidden flex justify-center items-center bg-black group cursor-pointer"
-            >
-              <img
-                :src="item.image"
-                class="h-full group-hover:scale-125 transition-transform"
-              />
-            </div>
+            <Image :src="item.image" :expandable="true" />
           </template>
           <template #title> {{ item.title }} </template>
           <p>{{ item.description }}</p>
@@ -152,10 +145,9 @@ const tales = [
     path: "/heavy-stuff",
   },
   {
-    title: "Holding hands",
-    description:
-      "Some of our cavemens are smart and some are strong. Let them do the heavy work",
-    icon: "lucide:handshake",
+    title: "Dancing with dinosaurs",
+    description: "Dance off with dinosaurs. Our cavemens are the best",
+    icon: "lucide:turtle",
     path: "/heavy-stuff",
   },
 ];
@@ -177,7 +169,7 @@ const memes = [
     image: "ps3.webp",
   },
   {
-    title: "Learn the hard way",
+    title: "Learning the hard way",
     description: "",
     image: "cut-open-head.webp",
   },
