@@ -14,7 +14,7 @@
       </Headline>
 
       <div class="hidden md:flex flex-1 justify-center items-center">
-        <Icon :name="'lucide:rocket'" :size="200" />
+        <RocketIcon />
       </div>
     </section>
 
