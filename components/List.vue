@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-16 min-h-56">
+  <div class="flex gap-6 md:gap-16 min-h-56">
     <div class="relative flex flex-col items-center">
       <div class="w-[1px] flex-1 bg-black"></div>
       <div class="w-auto h-24 flex items-center justify-center" v-if="icon">

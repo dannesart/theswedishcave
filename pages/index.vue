@@ -21,9 +21,7 @@
     <section class="grid gap-12">
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Offering</Headline>
-        <Headline :size="3"
-          >What our brave cavemen can offer you and your tribe</Headline
-        >
+        <Headline :size="3">What we can offer you and your tribe</Headline>
       </div>
       <List :icon="'lucide:hand-heart'">
         <Card
@@ -44,7 +42,9 @@
       </List>
     </section>
 
-    <section class="grid gap-12 bg-amber-50 -mx-4 md:-mx-14 p-4 md:p-14">
+    <section
+      class="grid gap-12 bg-amber-50 -mx-4 md:-mx-14 px-4 py-24 md:px-14 md:py-44"
+    >
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Campfire</Headline>
         <Headline :size="3"
@@ -98,7 +98,7 @@
 const offering = [
   {
     title: "Guidance",
-    description: "Our cavemens offer guidance through your ux journey",
+    description: "Our cavemens will guide you through your ux journey",
     icon: "lucide:milestone",
     path: "/heavy-stuff",
   },

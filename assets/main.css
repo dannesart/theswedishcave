@@ -6,3 +6,8 @@
     --figtree: "Figtree", sans-serif;
     --bebas: "Bebas Neue", sans-serif;
   }
+
+
+  ::selection {
+    @apply bg-rose-400 text-white;
+}

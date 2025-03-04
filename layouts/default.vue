@@ -38,6 +38,12 @@
     <main class="px-4 md:px-14 py-9 grid gap-20 md:gap-44">
       <slot />
     </main>
+    <footer
+      class="px-4 md:px-14 py-9 flex justify-between bg-black text-rose-50 mt-20 md:mt-44"
+    >
+      <Headline :size="4"> Well that's it folks! </Headline>
+      Call me?
+    </footer>
   </div>
 </template>
 

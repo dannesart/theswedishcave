@@ -16,7 +16,7 @@
       :to="link.path"
       :class="'text-xl inline-flex max-w-fit flex-col gap-2 font-antonio group'"
     >
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 group-hover:text-rose-400">
         {{ link.label }}
         <Icon name="lucide:arrow-right" size="30" />
       </div>
