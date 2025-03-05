@@ -41,7 +41,17 @@
     <footer
       class="px-4 md:px-14 py-9 flex justify-between bg-black text-rose-50 mt-20 md:mt-44"
     >
-      <Headline :size="4"> Well that's it folks! </Headline>
+      <div class="flex gap-6 items-center">
+        <div
+          class="w-24 h-24 pt-4 rounded-xl bg-rose-50 flex justify-center items-center text-black"
+        >
+          <Headline :size="2">SC</Headline>
+        </div>
+        <div>
+          <Headline :size="4"> Well that's it folks! </Headline>
+          <p>hey@sc.rocks</p>
+        </div>
+      </div>
       Call me?
     </footer>
   </div>
