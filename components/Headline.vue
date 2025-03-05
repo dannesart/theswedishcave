@@ -1,14 +1,17 @@
 <template>
-  <h1 v-if="size === 1" class="font-bebas text-6xl md:text-9xl">
+  <h1 v-if="size === 1" class="font-bebas text-6xl md:text-9xl text-balance">
     <slot />
   </h1>
 
-  <h2 v-if="size === 2" class="font-bebas text-5xl md:text-8xl">
+  <h2 v-if="size === 2" class="font-bebas text-5xl md:text-8xl text-balance">
     <slot />
     <div v-if="underline" class="h-2 w-20 bg-black"></div>
   </h2>
 
-  <h3 v-if="size === 3" class="font-antonio text-3xl md:text-[2.5rem]">
+  <h3
+    v-if="size === 3"
+    class="font-antonio text-3xl md:text-[2.5rem] leading-normal text-balance"
+  >
     <slot />
     <div v-if="underline" class="h-1 w-10 bg-black"></div>
   </h3>

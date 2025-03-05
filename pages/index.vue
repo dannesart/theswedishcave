@@ -6,9 +6,11 @@
         <span class="font-antonio text-5xl md:text-8xl block mb-9"
           >For your stone age brand.</span
         >
-        <span class="font-antonio text-3xl md:text-[2.5rem] block">
+        <span
+          class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
+        >
           Reach out to our
-          <NavLink path="/tribe" :active="true">Caveman</NavLink>
+          <NavLink path="/tribe" :active="true">tribe</NavLink>
           for guidance through space & time.
         </span>
       </Headline>
