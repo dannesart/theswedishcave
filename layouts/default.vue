@@ -50,9 +50,9 @@
         <div>
           <Headline :size="4"> Well that's it folks! </Headline>
           <p>hey@sc.rocks</p>
+          <p>Call me?</p>
         </div>
       </div>
-      Call me?
     </footer>
   </div>
 </template>

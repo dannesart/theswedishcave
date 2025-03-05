@@ -15,8 +15,24 @@
         </span>
       </Headline>
 
-      <div class="hidden md:flex flex-1 justify-center items-center">
+      <div class="hidden md:flex flex-1 justify-center items-center relative">
+        <Icon :name="'lucide:stars'" :size="30" :class="'absolute top-0'" />
         <RocketIcon />
+        <Icon
+          :name="'lucide:stars'"
+          :size="50"
+          :class="'absolute top-20 left-44'"
+        />
+        <Icon
+          :name="'lucide:stars'"
+          :size="25"
+          :class="'absolute top-44 right-44'"
+        />
+        <Icon
+          :name="'lucide:earth'"
+          :size="25"
+          :class="'absolute bottom-0 left-64'"
+        />
       </div>
     </section>
 

@@ -11,7 +11,7 @@
         </span>
       </Headline>
       <div class="hidden md:flex flex-1 justify-center items-center">
-        <Icon :name="'lucide:flame-kindling'" :size="200" />
+        <FireIcon />
       </div>
     </section>
   </NuxtLayout>
