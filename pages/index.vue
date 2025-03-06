@@ -16,22 +16,26 @@
       </Headline>
 
       <div class="hidden md:flex flex-1 justify-center items-center relative">
-        <Icon :name="'lucide:stars'" :size="30" :class="'absolute top-0'" />
+        <Icon
+          :name="'lucide:stars'"
+          :size="30"
+          :class="'absolute top-0 blink'"
+        />
         <RocketIcon />
         <Icon
           :name="'lucide:stars'"
           :size="50"
-          :class="'absolute top-20 left-44'"
+          :class="'absolute top-20 left-44 blink'"
         />
         <Icon
           :name="'lucide:stars'"
           :size="25"
-          :class="'absolute top-44 right-44'"
+          :class="'absolute top-44 right-44 blink'"
         />
         <Icon
           :name="'lucide:earth'"
           :size="25"
-          :class="'absolute bottom-0 left-64'"
+          :class="'absolute bottom-0 left-64 rotate'"
         />
       </div>
     </section>
@@ -193,3 +197,36 @@ const memes = [
   },
 ];
 </script>
+
+<style scoped>
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.blink {
+  animation: blink 3s linear infinite;
+  &:nth-of-type(2) {
+    animation-delay: 1s;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 1.5s;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.5;
+  }
+}
+</style>

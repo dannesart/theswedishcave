@@ -26,8 +26,11 @@
           />
         </button>
         <ul
-          class="flex flex-col md:flex-row p-20 md:p-0 gap-10 bg-black inset-0 z-40 fixed md:bg-transparent md:relative"
-          :class="{ 'hidden md:flex': !showMenu }"
+          class="flex flex-col origin-top-right transition-transform duration-300 md:flex-row p-10 md:p-0 gap-10 bg-black inset-0 z-40 fixed md:bg-transparent md:relative"
+          :class="{
+            'opacity-0 scale-50 md:scale-100 md:opacity-100': !showMenu,
+            'scale-100 opacity-100': showMenu,
+          }"
         >
           <li v-for="item in menu" :key="item.name">
             <NavLink :path="item.path">{{ item.name }}</NavLink>

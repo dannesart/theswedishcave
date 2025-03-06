@@ -41,10 +41,22 @@
 <style scoped>
 #Fire {
   animation: fire 2s linear infinite;
+  transform-origin: top;
+  translate: 1px 0px;
 }
 
 #Ship {
   animation: ship 2s linear infinite;
+}
+
+@keyframes fire2 {
+  0%,
+  100% {
+    rotate: -5deg;
+  }
+  50% {
+    rotate: 5deg;
+  }
 }
 
 @keyframes fire {
