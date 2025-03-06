@@ -5,6 +5,7 @@
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    id="Icon"
   >
     <g id="lucide:flame-kindling">
       <path
@@ -23,43 +24,10 @@
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <path
-        id="Fire2"
-        d="M15.5 6.5C14.5 5.5 13 5 12 2C11 2 8 4.5 10.4 7.1C10.6231 7.31176 10.7943 7.57212 10.9004 7.86083C11.0064 8.14954 11.0445 8.45882 11.0115 8.76462C10.9786 9.07043 10.8756 9.36452 10.7105 9.62403C10.5454 9.88355 10.3227 10.1015 10.0596 10.2609C9.7966 10.4203 9.50034 10.5169 9.19389 10.5432C8.88743 10.5695 8.57905 10.5247 8.29272 10.4124C8.00638 10.3001 7.74981 10.1232 7.54294 9.89562C7.33608 9.668 7.18451 9.39574 7.1 9.1C7 9.4 7 9.7 7 10C7 11.3261 7.52678 12.5979 8.46447 13.5355C9.40215 14.4732 10.6739 15 12 15C13.3261 15 14.5979 14.4732 15.5355 13.5355C16.4732 12.5979 17 11.3261 17 10C16.9812 8.68115 16.4421 7.42315 15.5 6.5Z"
-        stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
     </g>
   </svg>
 </template>
 
 <script></script>
 
-<style>
-#Fire,
-#Fire2 {
-  transform-origin: center;
-  animation: flame 3s linear infinite;
-  translate: 0 4px;
-}
-
-#Fire2 {
-  animation-delay: 1.5s;
-  scale: 0;
-}
-
-@keyframes flame {
-  0% {
-    scale: 0.2;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    scale: 1;
-    opacity: 0;
-  }
-}
-</style>
+<style scoped></style>

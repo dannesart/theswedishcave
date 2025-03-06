@@ -3,7 +3,7 @@
     :to="path"
     class="hover:text-rose-50 text-[2.5rem] font-antonio text-rose-50 md:text-black cursor-pointer hover:border-b-4 border-rose-950 relative group"
     :class="{
-      'md:text-rose-950 border-b-4': active,
+      'text-rose-950 border-b-4': active,
     }"
     active-class="md:text-rose-950 border-b-4"
   >
