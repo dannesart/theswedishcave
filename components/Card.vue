@@ -8,13 +8,13 @@
         <slot name="title" />
       </Headline>
     </header>
-    <div v-if="$slots.default">
+    <div v-if="$slots.default" class="text-xl">
       <slot />
     </div>
     <NuxtLink
       v-if="link"
       :to="link.path"
-      :class="'text-xl inline-flex max-w-fit flex-col gap-2 font-antonio group'"
+      :class="'text-2xl inline-flex max-w-fit flex-col gap-2 font-antonio group'"
     >
       <div class="flex items-center gap-2 group-hover:text-rose-400">
         {{ link.label }}
