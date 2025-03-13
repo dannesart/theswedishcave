@@ -38,13 +38,13 @@
         </ul>
       </nav>
     </header>
-    <main class="px-4 md:px-14 py-9 grid gap-20 md:gap-44">
+    <main class="px-4 md:px-14 py-9 grid gap-20 md:gap-44 2xl:w-3/4 mx-auto">
       <slot />
     </main>
     <footer
       class="px-4 md:px-14 py-9 flex justify-between bg-black text-rose-50 mt-20 md:mt-44"
     >
-      <div class="flex gap-6 items-center">
+      <div class="flex gap-6 items-center 2xl:w-3/4 mx-auto">
         <div
           class="w-24 h-24 pt-4 rounded-xl bg-rose-50 flex justify-center items-center text-black"
         >

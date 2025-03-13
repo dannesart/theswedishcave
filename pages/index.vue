@@ -3,15 +3,13 @@
     <section class="relative flex">
       <Headline :size="1">
         <span> Creating experiences </span>
-        <span class="font-antonio text-5xl md:text-8xl block mb-9"
-          >For your stone age brand.</span
+        <span class="text-5xl md:text-8xl block mb-9 font-patua"
+          >For your future brand.</span
         >
         <span
           class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
         >
-          Reach out to our
-          <NavLink path="/tribe" :active="true">tribe</NavLink>
-          for guidance through space & time.
+          We drag brands out of the Stone Age with killer UX and design.
         </span>
       </Headline>
 
@@ -42,8 +40,11 @@
 
     <section class="grid gap-12">
       <div class="grid gap-8">
-        <Headline :size="2" :underline="true">Offering</Headline>
-        <Headline :size="3">What we can offer you and your tribe</Headline>
+        <Headline :size="2" :underline="true">Services</Headline>
+        <Headline :size="3"
+          >Branding, Design, and UX Optimization – because your brand deserves
+          more than just a loincloth
+        </Headline>
       </div>
       <List :icon="'lucide:hand-heart'">
         <Card
@@ -94,6 +95,14 @@
     </section>
 
     <section class="grid gap-12">
+      <Headline :size="2" :underline="true"> Call to action </Headline>
+      <Headline :size="3">
+        Ready to evolve? Contact us and let's chisel out your brand's
+        masterpiece!
+      </Headline>
+    </section>
+
+    <section class="grid gap-12">
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Memes</Headline>
         <Headline :size="3"
@@ -120,13 +129,13 @@
 const offering = [
   {
     title: "Guidance",
-    description: "Our cavemens will guide you through your ux journey",
+    description: "Our caveman, Gus, will guide you through your ux journey",
     icon: "lucide:milestone",
     path: "/heavy-stuff",
   },
   {
     title: "thought process",
-    description: "Let our brilliant cavemen be part of your thought process",
+    description: "Let our Gus be part of your thought process",
     icon: "lucide:brain",
     path: "/heavy-stuff",
   },
