@@ -97,8 +97,8 @@
     <section class="grid gap-12">
       <Headline :size="2" :underline="true"> Call to action </Headline>
       <Headline :size="3">
-        Ready to evolve? Contact us and let's chisel out your brand's
-        masterpiece!
+        Ready to evolve? <NavLink :path="'/tribe'"> Contact Gus </NavLink> and
+        let's chisel out your brand's masterpiece!
       </Headline>
     </section>
 
