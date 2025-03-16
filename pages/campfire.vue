@@ -18,7 +18,7 @@
     <section class="grid gap-28">
       <article class="grid gap-10">
         <Headline :size="2"> Gus Goes to Space: A Branding Odyssey </Headline>
-        <div class="grid gap-24 grid-cols-[1fr,auto]">
+        <div class="grid gap-24 md:grid-cols-[1fr,auto]">
           <Paragraph>
             <div class="grid gap-5 text-xl">
               <p>
@@ -91,7 +91,7 @@
               </p>
             </div>
           </Paragraph>
-          <div class="h-96 w-96">
+          <div class="md:h-96 md:w-96">
             <Image :src="'caveman-space-suit.webp'" :expandable="false" />
           </div>
         </div>
