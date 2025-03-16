@@ -10,7 +10,7 @@
         </Headline>
       </div>
       <div class="hidden md:flex flex-1 justify-center items-center">
-        <Image :src="'caveman-space-suit.webp'" :expandable="false" />
+        <!-- <Image :src="'caveman-space-suit.webp'" :expandable="false" /> -->
       </div>
     </section>
     <section class="grid gap-12">
@@ -24,7 +24,7 @@
             <div
               class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
             >
-              Missing cave painting
+              <Image :src="'caveman-space-suit.webp'" :expandable="false" />
             </div>
           </template>
           <template v-slot:title> Gus </template>

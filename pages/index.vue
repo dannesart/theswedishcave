@@ -2,14 +2,14 @@
   <NuxtLayout>
     <section class="relative flex">
       <Headline :size="1">
-        <span> Creating experiences </span>
-        <span class="text-5xl md:text-8xl block mb-9 font-patua"
-          >For your future brand.</span
-        >
+        <span> We drag brands out of the Stone Age </span>
+        <!-- <span class="text-5xl md:text-8xl block mb-9 font-patua"
+          >Stone Age with killer UX and design.</span
+        > -->
         <span
           class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
         >
-          We drag brands out of the Stone Age with killer UX and design.
+          with killer UX and design.
         </span>
       </Headline>
 
