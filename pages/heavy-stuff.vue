@@ -7,7 +7,9 @@
           <span
             class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
           >
-            We drag brands out of the Stone Age with killer UX and design.
+            We catapult brands from the Stone Age into the future with sharp UX
+            and jaw-dropping design—because chiseling logos into rock just
+            doesn’t cut it anymore.
           </span>
         </Headline>
         <div class="hidden md:flex flex-1 justify-center items-center">

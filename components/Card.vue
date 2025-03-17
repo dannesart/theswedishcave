@@ -1,5 +1,5 @@
 <template>
-  <article class="grid gap-4 w-full">
+  <article class="grid grid-rows-[12rem_2.5rem_5rem_auto] gap-4 w-full">
     <div v-if="$slots.image" class="h-48">
       <slot name="image" />
     </div>

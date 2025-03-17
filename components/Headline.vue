@@ -15,7 +15,7 @@
     <slot />
     <div v-if="underline" class="h-1 w-10 bg-black"></div>
   </h3>
-  <h3 v-if="size === 4" class="font-bebas text-2xl md:text-4xl">
+  <h3 v-if="size === 4" class="font-bebas text-2xl md:text-4xl truncate">
     <slot />
     <div v-if="underline" class="h-1 w-10 bg-black"></div>
   </h3>

@@ -4,10 +4,11 @@
       <section class="relative flex">
         <div>
           <Headline :size="1">
-            Our tribe
+            Get to know us
             <span
               class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
-              >Is ready for a hunt.</span
+              >No spears? No problem. We craft ideas sharper than stone
+              axes.</span
             >
           </Headline>
         </div>
@@ -15,6 +16,12 @@
           <!-- <Image :src="'caveman-space-suit.webp'" :expandable="false" /> -->
         </div>
       </section>
+    </Chunk>
+    <Chunk>
+      <div class="grid gap-8">
+        <Headline :size="2" :underline="true">Cave location</Headline>
+        <Headline :size="3">Find us here</Headline>
+      </div>
     </Chunk>
     <Chunk>
       <div class="grid gap-8">
@@ -27,14 +34,40 @@
             <div
               class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
             >
-              <Image :src="'caveman-space-suit.webp'" :expandable="false" />
+              <Image :src="'gus.webp'" :expandable="false" />
             </div>
           </template>
           <template v-slot:title> Gus </template>
           <p>
-            Gus is the leader of the tribe. He is a wise dude. <br />
-            At least compared to the others.
+            Gus, our fearless (and slightly questionable) leader. <br />
+            Wise? Maybe.<br />
+            Determined? Absolutely
           </p>
+        </Card>
+        <Card>
+          <template v-slot:image>
+            <div
+              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+            >
+              <Image :src="'melvin.webp'" :expandable="false" />
+            </div>
+          </template>
+          <template v-slot:title> Melvin </template>
+          <p>
+            Melvin is brave.. not bright. <br />
+            But he has a heart of gold
+          </p>
+        </Card>
+        <Card>
+          <template v-slot:image>
+            <div
+              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+            >
+              Missing cave painting
+            </div>
+          </template>
+          <template v-slot:title> You? </template>
+          <p>Enter your story here..</p>
         </Card>
       </List>
     </Chunk>

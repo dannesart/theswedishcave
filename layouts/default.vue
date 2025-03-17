@@ -55,7 +55,7 @@
         <div>
           <Headline :size="4"> Well that's it folks! </Headline>
           <p>hey@sc.rocks</p>
-          <p>Call me?</p>
+          <p>🔥 Join the Tribe</p>
           <p>
             <NuxtLink :to="'/auth'">Log in</NuxtLink>
           </p>

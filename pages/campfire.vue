@@ -4,10 +4,10 @@
       <Hero>
         <template v-slot:left>
           <Headline :size="1">
-            Read our stories
+            Legends by the Fire
             <span
               class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
-              >From Gus and his brave cavemen</span
+              >Epic Tales of Gus & His Fearless Tribe.</span
             >
           </Headline>
         </template>
@@ -22,6 +22,7 @@
       <section class="grid gap-28">
         <article class="grid gap-10">
           <Headline :size="2"> Gus Goes to Space: A Branding Odyssey </Headline>
+          <Like />
           <div class="grid gap-24 md:grid-cols-[1fr,auto]">
             <Paragraph>
               <div class="grid gap-5 text-xl">
@@ -96,7 +97,7 @@
               </div>
             </Paragraph>
             <div class="md:h-96 md:w-96">
-              <Image :src="'caveman-space-suit.webp'" :expandable="false" />
+              <Image :src="'gus.webp'" :expandable="false" />
             </div>
           </div>
         </article>
@@ -105,6 +106,7 @@
           <Headline :size="2">
             Gus and the Brave Cavemen: The Quest for the Fireberry
           </Headline>
+          <Like />
           <Paragraph>
             <div class="grid gap-5 text-xl">
               <p>

@@ -22,18 +22,18 @@
             <Icon
               :name="'lucide:stars'"
               :size="30"
-              :class="'absolute top-0 blink'"
+              :class="'absolute top-0 star'"
             />
             <RocketIcon />
             <Icon
               :name="'lucide:stars'"
               :size="50"
-              :class="'absolute top-20 left-5 blink'"
+              :class="'absolute top-20 left-5 star'"
             />
             <Icon
               :name="'lucide:stars'"
               :size="25"
-              :class="'absolute top-44 right-0 blink'"
+              :class="'absolute top-44 right-0 star'"
             />
             <Icon
               :name="'lucide:earth'"
@@ -77,8 +77,11 @@
         <div class="grid gap-8">
           <Headline :size="2" :underline="true">Campfire</Headline>
           <Headline :size="3"
-            >Some of our breathtaking campfire tales. Told by some of our oldest
-            and wisest.</Headline
+            >Gather 'round, cavemen and women! <br />
+            Our tales are full of wisdom (and just a little bit of madness).
+            <br />
+            Let us show you what happens when raw creativity meets
+            strategy.</Headline
           >
         </div>
         <List :icon="'lucide:flame'">
@@ -102,10 +105,12 @@
     </Chunk>
 
     <Chunk>
-      <Headline :size="2" :underline="true"> Call to action </Headline>
+      <Headline :size="2" :underline="true">
+        Evolve your brand with us.
+      </Headline>
       <Headline :size="3">
-        Ready to evolve? <NavLink :path="'/tribe'"> Contact Gus </NavLink> and
-        let's chisel out your brand's masterpiece!
+        Ready to break out of your cave and into the future? <br />
+        Let's build something legendary.
       </Headline>
     </Chunk>
 
@@ -113,7 +118,8 @@
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Memes</Headline>
         <Headline :size="3"
-          >Just here for the memes aren't ya? We got you.</Headline
+          >Need a laugh while your brand gets revamped? We got memes and
+          madness. Let’s have some fun.</Headline
         >
       </div>
       <List :icon="'lucide:drama'">
@@ -230,8 +236,8 @@ const memes = [
     transform: rotate(360deg);
   }
 }
-.blink {
-  animation: blink 3s linear infinite;
+.star {
+  animation: blink 3s linear infinite, rotate 100s linear infinite;
   &:nth-of-type(2) {
     animation-delay: 1s;
   }
