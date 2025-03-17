@@ -1,44 +1,46 @@
 <template>
   <NuxtLayout>
-    <section class="relative flex">
-      <Headline :size="1">
-        <span> We drag brands out of the Stone Age </span>
-        <!-- <span class="text-5xl md:text-8xl block mb-9 font-patua"
+    <Chunk>
+      <div class="flex relative">
+        <Headline :size="1">
+          <span> We drag brands out of the Stone Age </span>
+          <!-- <span class="text-5xl md:text-8xl block mb-9 font-patua"
           >Stone Age with killer UX and design.</span
         > -->
-        <span
-          class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
-        >
-          with killer UX and design.
-        </span>
-      </Headline>
+          <span
+            class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
+          >
+            with killer UX and design.
+          </span>
+        </Headline>
 
-      <div class="hidden md:flex flex-1 justify-center items-center relative">
-        <Icon
-          :name="'lucide:stars'"
-          :size="30"
-          :class="'absolute top-0 blink'"
-        />
-        <RocketIcon />
-        <Icon
-          :name="'lucide:stars'"
-          :size="50"
-          :class="'absolute top-20 left-44 blink'"
-        />
-        <Icon
-          :name="'lucide:stars'"
-          :size="25"
-          :class="'absolute top-44 right-44 blink'"
-        />
-        <Icon
-          :name="'lucide:earth'"
-          :size="25"
-          :class="'absolute bottom-0 left-64 rotate'"
-        />
+        <div class="hidden md:flex flex-1 justify-center items-center relative">
+          <Icon
+            :name="'lucide:stars'"
+            :size="30"
+            :class="'absolute top-0 blink'"
+          />
+          <RocketIcon />
+          <Icon
+            :name="'lucide:stars'"
+            :size="50"
+            :class="'absolute top-20 -left-20 blink'"
+          />
+          <Icon
+            :name="'lucide:stars'"
+            :size="25"
+            :class="'absolute top-44 -right-20 blink'"
+          />
+          <Icon
+            :name="'lucide:earth'"
+            :size="25"
+            :class="'absolute bottom-0 -left-10 rotate'"
+          />
+        </div>
       </div>
-    </section>
+    </Chunk>
 
-    <section class="grid gap-12">
+    <Chunk>
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Services</Headline>
         <Headline :size="3"
@@ -63,46 +65,46 @@
           <p>{{ item.description }}</p>
         </Card>
       </List>
-    </section>
+    </Chunk>
 
-    <section
-      class="grid gap-12 bg-amber-50 -mx-4 md:-mx-14 px-4 py-24 md:px-14 md:py-44"
-    >
-      <div class="grid gap-8">
-        <Headline :size="2" :underline="true">Campfire</Headline>
-        <Headline :size="3"
-          >Some of our breathtaking campfire tales. Told by some of our oldest
-          and wisest.</Headline
-        >
+    <Chunk :bg="'amber'">
+      <div class="grid gap-12 relative z-10">
+        <div class="grid gap-8">
+          <Headline :size="2" :underline="true">Campfire</Headline>
+          <Headline :size="3"
+            >Some of our breathtaking campfire tales. Told by some of our oldest
+            and wisest.</Headline
+          >
+        </div>
+        <List :icon="'lucide:flame'">
+          <Card
+            v-for="item in tales"
+            :key="item.title"
+            :link="{ label: 'Read more', path: item.path }"
+          >
+            <template #image>
+              <div
+                class="rounded-xl h-full flex justify-center items-center bg-black"
+              >
+                <Icon :name="item.icon" :class="'text-amber-50'" :size="100" />
+              </div>
+            </template>
+            <template #title> {{ item.title }} </template>
+            <p>{{ item.description }}</p>
+          </Card>
+        </List>
       </div>
-      <List :icon="'lucide:flame'">
-        <Card
-          v-for="item in tales"
-          :key="item.title"
-          :link="{ label: 'Read more', path: item.path }"
-        >
-          <template #image>
-            <div
-              class="rounded-xl h-full flex justify-center items-center bg-black"
-            >
-              <Icon :name="item.icon" :class="'text-amber-50'" :size="100" />
-            </div>
-          </template>
-          <template #title> {{ item.title }} </template>
-          <p>{{ item.description }}</p>
-        </Card>
-      </List>
-    </section>
+    </Chunk>
 
-    <section class="grid gap-12">
+    <Chunk>
       <Headline :size="2" :underline="true"> Call to action </Headline>
       <Headline :size="3">
         Ready to evolve? <NavLink :path="'/tribe'"> Contact Gus </NavLink> and
         let's chisel out your brand's masterpiece!
       </Headline>
-    </section>
+    </Chunk>
 
-    <section class="grid gap-12">
+    <Chunk>
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Memes</Headline>
         <Headline :size="3"
@@ -121,7 +123,7 @@
           </div>
         </Card>
       </List>
-    </section>
+    </Chunk>
   </NuxtLayout>
 </template>
 
@@ -208,6 +210,10 @@ const memes = [
 </script>
 
 <style scoped>
+.ml-50dvw {
+  margin-left: calc(50% - 50vw);
+}
+
 .rotate {
   animation: rotate 20s linear infinite;
 }

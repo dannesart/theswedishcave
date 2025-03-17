@@ -1,0 +1,22 @@
+<template>
+  <section
+    class="px-4 md:px-14 py-20"
+    :class="{
+      'bg-amber-50': bg === 'amber',
+      'bg-rose-50': bg === 'rose',
+      'bg-black': bg === 'black',
+    }"
+  >
+    <div class="grid gap-12 2xl:w-3/4 mx-auto">
+      <slot />
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+type Props = {
+  bg?: "amber" | "rose" | "black";
+};
+
+const { bg } = defineProps<Props>();
+</script>

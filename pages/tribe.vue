@@ -1,19 +1,22 @@
 <template>
   <NuxtLayout>
-    <section class="relative flex">
-      <div>
-        <Headline :size="1">
-          Our tribe
-          <span class="font-antonio text-5xl md:text-8xl block mb-9"
-            >Is ready for a hunt.</span
-          >
-        </Headline>
-      </div>
-      <div class="hidden md:flex flex-1 justify-center items-center">
-        <!-- <Image :src="'caveman-space-suit.webp'" :expandable="false" /> -->
-      </div>
-    </section>
-    <section class="grid gap-12">
+    <Chunk>
+      <section class="relative flex">
+        <div>
+          <Headline :size="1">
+            Our tribe
+            <span
+              class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
+              >Is ready for a hunt.</span
+            >
+          </Headline>
+        </div>
+        <div class="hidden md:flex flex-1 justify-center items-center">
+          <!-- <Image :src="'caveman-space-suit.webp'" :expandable="false" /> -->
+        </div>
+      </section>
+    </Chunk>
+    <Chunk>
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Our tribe</Headline>
         <Headline :size="3">Meet the tribe members</Headline>
@@ -34,6 +37,6 @@
           </p>
         </Card>
       </List>
-    </section>
+    </Chunk>
   </NuxtLayout>
 </template>

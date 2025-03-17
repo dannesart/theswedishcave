@@ -38,7 +38,7 @@
         </ul>
       </nav>
     </header>
-    <main class="px-4 md:px-14 py-9 grid gap-20 md:gap-44 2xl:w-3/4 mx-auto">
+    <main class="grid gap-20 md:gap-20">
       <slot />
     </main>
     <footer
