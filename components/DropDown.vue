@@ -10,7 +10,7 @@
     <span v-if="label">{{ label }}</span>
   </button>
   <div
-    class="bg-white text-black p-4 rounded-lg w-48 shadow-lg"
+    class="bg-white text-black p-4 rounded-lg w-fit shadow-lg"
     ref="dropDown"
     :id="dropid"
     popover

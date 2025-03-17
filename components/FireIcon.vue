@@ -27,3 +27,19 @@
     </g>
   </svg>
 </template>
+
+<style scoped>
+#Fire {
+  transform-origin: bottom;
+  animation: fire 1s ease-in-out infinite alternate;
+}
+
+@keyframes fire {
+  from {
+    rotate: -5deg;
+  }
+  to {
+    rotate: 5deg;
+  }
+}
+</style>

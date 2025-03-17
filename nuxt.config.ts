@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     redirectOptions: {
       login: "/auth",
       callback: "/",
-      exclude: ["/", "/create-account"],
+      exclude: ["/", "/campfire", "/heavy-stuff", "/tribe"],
     },
   },
 });

@@ -1,21 +1,24 @@
 <template>
   <NuxtLayout>
     <Chunk>
-      <section class="relative flex mb-44">
-        <Headline :size="1">
-          Read our stories
-          <span class="font-patua text-5xl md:text-8xl block mb-9"
-            >From our gus and his wise cavemen</span
-          >
-          <span class="font-antonio text-3xl md:text-[2.5rem] block">
-            Around the Campfire
-          </span>
-        </Headline>
-        <div class="hidden md:flex flex-1 justify-center items-center">
-          <FireIcon />
-        </div>
-      </section>
-
+      <Hero>
+        <template v-slot:left>
+          <Headline :size="1">
+            Read our stories
+            <span
+              class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
+              >From Gus and his brave cavemen</span
+            >
+          </Headline>
+        </template>
+        <template v-slot:right>
+          <div class="hidden md:flex flex-1 justify-center items-center">
+            <FireIcon />
+          </div>
+        </template>
+      </Hero>
+    </Chunk>
+    <Chunk>
       <section class="grid gap-28">
         <article class="grid gap-10">
           <Headline :size="2"> Gus Goes to Space: A Branding Odyssey </Headline>

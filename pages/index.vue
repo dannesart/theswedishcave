@@ -1,48 +1,48 @@
 <template>
   <NuxtLayout>
     <Chunk>
-      <div class="flex relative justify-between">
-        <Headline :size="1">
-          <span>
-            We drag brands out <br />
-            of the Stone Age
-          </span>
-          <!-- <span class="text-5xl md:text-8xl block mb-9 font-patua"
-          >Stone Age with killer UX and design.</span
-        > -->
-          <span
-            class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
+      <Hero>
+        <template v-slot:left>
+          <Headline :size="1">
+            <span>
+              We drag brands out <br />
+              of the Stone Age
+            </span>
+            <span
+              class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
+            >
+              with killer UX and design.
+            </span>
+          </Headline>
+        </template>
+        <template v-slot:right>
+          <div
+            class="hidden md:flex flex-none justify-center items-center relative"
           >
-            with killer UX and design.
-          </span>
-        </Headline>
-
-        <div
-          class="hidden md:flex flex-none justify-center items-center relative"
-        >
-          <Icon
-            :name="'lucide:stars'"
-            :size="30"
-            :class="'absolute top-0 blink'"
-          />
-          <RocketIcon />
-          <Icon
-            :name="'lucide:stars'"
-            :size="50"
-            :class="'absolute top-20 -left-20 blink'"
-          />
-          <Icon
-            :name="'lucide:stars'"
-            :size="25"
-            :class="'absolute top-44 -right-20 blink'"
-          />
-          <Icon
-            :name="'lucide:earth'"
-            :size="25"
-            :class="'absolute bottom-0 -left-10 rotate'"
-          />
-        </div>
-      </div>
+            <Icon
+              :name="'lucide:stars'"
+              :size="30"
+              :class="'absolute top-0 blink'"
+            />
+            <RocketIcon />
+            <Icon
+              :name="'lucide:stars'"
+              :size="50"
+              :class="'absolute top-20 left-5 blink'"
+            />
+            <Icon
+              :name="'lucide:stars'"
+              :size="25"
+              :class="'absolute top-44 right-0 blink'"
+            />
+            <Icon
+              :name="'lucide:earth'"
+              :size="25"
+              :class="'absolute bottom-0 left-10 rotate'"
+            />
+          </div>
+        </template>
+      </Hero>
     </Chunk>
 
     <Chunk>

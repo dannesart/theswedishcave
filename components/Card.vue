@@ -8,9 +8,9 @@
         <slot name="title" />
       </Headline>
     </header>
-    <div v-if="$slots.default" class="text-xl">
+    <Text v-if="$slots.default">
       <slot />
-    </div>
+    </Text>
     <NuxtLink
       v-if="link"
       :to="link.path"
