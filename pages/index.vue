@@ -1,9 +1,12 @@
 <template>
   <NuxtLayout>
     <Chunk>
-      <div class="flex relative">
+      <div class="flex relative justify-between">
         <Headline :size="1">
-          <span> We drag brands out of the Stone Age </span>
+          <span>
+            We drag brands out <br />
+            of the Stone Age
+          </span>
           <!-- <span class="text-5xl md:text-8xl block mb-9 font-patua"
           >Stone Age with killer UX and design.</span
         > -->
@@ -14,7 +17,9 @@
           </span>
         </Headline>
 
-        <div class="hidden md:flex flex-1 justify-center items-center relative">
+        <div
+          class="hidden md:flex flex-none justify-center items-center relative"
+        >
           <Icon
             :name="'lucide:stars'"
             :size="30"

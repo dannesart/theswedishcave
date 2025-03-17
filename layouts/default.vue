@@ -1,5 +1,7 @@
 <template>
   <div class="flex flex-col min-h-svh bg-rose-50">
+    <UserNav />
+
     <header class="px-4 md:px-14 py-9 flex justify-between">
       <nuxt-link
         :to="'/'"
@@ -44,7 +46,7 @@
     <footer
       class="px-4 md:px-14 py-9 flex justify-between bg-black text-rose-50 mt-20 md:mt-44"
     >
-      <div class="flex gap-6 items-center 2xl:w-3/4 mx-auto">
+      <div class="flex gap-6 2xl:w-3/4 mx-auto">
         <div
           class="w-24 h-24 pt-4 rounded-xl bg-rose-50 flex justify-center items-center text-black"
         >
@@ -54,6 +56,9 @@
           <Headline :size="4"> Well that's it folks! </Headline>
           <p>hey@sc.rocks</p>
           <p>Call me?</p>
+          <p>
+            <NuxtLink :to="'/auth'">Log in</NuxtLink>
+          </p>
         </div>
       </div>
     </footer>
@@ -62,6 +67,7 @@
 
 <script setup lang="ts">
 const showMenu = ref(false);
+
 const menu = [
   { name: "Cave", path: "/" },
   { name: "Campfire", path: "/campfire" },
