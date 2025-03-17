@@ -1,7 +1,7 @@
 <template>
   <nav
     v-if="isLogedIn"
-    class="rounded-full w-fit left-1/2 bg-white shadow-lg text-rose-50 p-2 px-4 flex justify-end fixed top-5 z-50 gap-6"
+    class="rounded-full w-fit bg-white shadow-lg text-rose-50 p-2 px-4 flex justify-end top-5 z-50 gap-6 fixed left-1/2"
   >
     <DropDown icon="lucide:plus">
       <button

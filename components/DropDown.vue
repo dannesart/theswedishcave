@@ -1,6 +1,8 @@
 <template>
   <button
     class="min-w-14 h-14 text-2xl rounded-full flex items-center justify-center bg-rose-50 text-black"
+    @mouseenter="handleHover"
+    ref="dropDownBtn"
     :popovertarget="dropid"
     :id="btnid"
   >
@@ -9,6 +11,7 @@
   </button>
   <div
     class="bg-white text-black p-4 rounded-lg w-48 shadow-lg"
+    ref="dropDown"
     :id="dropid"
     popover
     :anchor="btnid"
@@ -28,6 +31,10 @@ type Props = {
 const { label, icon } = defineProps<Props>();
 const btnid = crypto.randomUUID();
 const dropid = crypto.randomUUID();
+const dropDown = ref();
+const dropDownBtn = ref();
+
+const handleHover = () => {};
 </script>
 
 <style scoped>
