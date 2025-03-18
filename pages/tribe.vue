@@ -63,6 +63,17 @@
             <div
               class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
             >
+              <Image :src="'beatrix.png'" :expandable="false" />
+            </div>
+          </template>
+          <template v-slot:title> Beatrix </template>
+          <p>Beatrix is fearless. <br /></p>
+        </Card>
+        <Card>
+          <template v-slot:image>
+            <div
+              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+            >
               Missing cave painting
             </div>
           </template>
