@@ -1,5 +1,11 @@
 <template>
-  <article class="grid grid-rows-[12rem_2.5rem_5rem_auto] gap-4 w-full">
+  <article
+    class="grid grid-rows-[12rem_2.5rem_5rem_auto] gap-4 w-full card"
+    v-gsap.whenVisible.once.from="{
+      scale: 0.2,
+      delay: (index || 0) * 0.1,
+    }"
+  >
     <div v-if="$slots.image" class="h-48">
       <slot name="image" />
     </div>
@@ -33,6 +39,7 @@ type Props = {
     label: string;
     path: string;
   };
+  index?: number;
 };
 
 const { link } = defineProps<Props>();

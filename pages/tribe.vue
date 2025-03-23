@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout>
     <Chunk>
-      <section class="relative flex">
-        <div>
+      <Hero>
+        <template v-slot:left>
           <Headline :size="1">
             Get to know us
             <span
@@ -11,11 +11,9 @@
               axes.</span
             >
           </Headline>
-        </div>
-        <div class="hidden md:flex flex-1 justify-center items-center">
-          <!-- <Image :src="'caveman-space-suit.webp'" :expandable="false" /> -->
-        </div>
-      </section>
+        </template>
+        <template v-slot:right></template>
+      </Hero>
     </Chunk>
     <Chunk>
       <div class="grid gap-8">
@@ -63,11 +61,14 @@
             <div
               class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
             >
-              <Image :src="'beatrix.png'" :expandable="false" />
+              <Image :src="'mira.webp'" :expandable="false" />
             </div>
           </template>
-          <template v-slot:title> Beatrix </template>
-          <p>Beatrix is fearless. <br /></p>
+          <template v-slot:title> Mira </template>
+          <p>
+            Mira can't shoot a deer within 10 meters. <br />
+            But she can hit with a kick-ass branding & ux from miles away.
+          </p>
         </Card>
         <Card>
           <template v-slot:image>

@@ -1,5 +1,8 @@
 <template>
-  <h1 v-if="size === 1" class="font-bebas text-6xl md:text-9xl text-balance">
+  <h1
+    v-if="size === 1"
+    class="font-bebas text-7xl md:text-[11rem] text-balance"
+  >
     <slot />
   </h1>
 
@@ -15,10 +18,10 @@
     <slot />
     <div v-if="underline" class="h-1 w-10 bg-black"></div>
   </h3>
-  <h3 v-if="size === 4" class="font-bebas text-2xl md:text-4xl truncate">
+  <h4 v-if="size === 4" class="font-bebas text-3xl md:text-4xl truncate">
     <slot />
     <div v-if="underline" class="h-1 w-10 bg-black"></div>
-  </h3>
+  </h4>
 </template>
 
 <script setup lang="ts">

@@ -4,10 +4,27 @@
       <Hero>
         <template v-slot:left>
           <Headline :size="1">
-            <span>
-              We drag brands out <br />
-              of the Stone Age
+            <span class="block" v-gsap.whenVisible.once.from="{ y: -40 }">
+              We drag
             </span>
+            <div class="flex gap-6">
+              <p
+                class="inline-block"
+                v-gsap.whenVisible.delay-700.once.from="{ opacity: 0, x: 40 }"
+              >
+                <span class="neon">b</span>r<span class="neon">ands</span>
+              </p>
+              <span
+                class="inline-block"
+                v-gsap.whenVisible.delay-1400.once.from="{
+                  opacity: 0,
+                  scale: 0.3,
+                }"
+              >
+                out
+              </span>
+            </div>
+            of the Stone Age
             <span
               class="font-antonio text-3xl md:text-[2.5rem] block leading-normal"
             >
@@ -55,9 +72,10 @@
       </div>
       <List :icon="'lucide:hand-heart'">
         <Card
-          v-for="item in offering"
+          v-for="(item, index) in offering"
           :key="item.title"
           :link="{ label: 'Read more', path: item.path }"
+          :index="index"
         >
           <template #image>
             <div
@@ -67,7 +85,7 @@
             </div>
           </template>
           <template #title> {{ item.title }} </template>
-          <p>{{ item.description }}</p>
+          <Text>{{ item.description }}</Text>
         </Card>
       </List>
     </Chunk>
@@ -86,9 +104,10 @@
         </div>
         <List :icon="'lucide:flame'">
           <Card
-            v-for="item in tales"
+            v-for="(item, index) in tales"
             :key="item.title"
             :link="{ label: 'Read more', path: item.path }"
+            :index="index"
           >
             <template #image>
               <div
@@ -98,7 +117,7 @@
               </div>
             </template>
             <template #title> {{ item.title }} </template>
-            <p>{{ item.description }}</p>
+            <Text>{{ item.description }}</Text>
           </Card>
         </List>
       </div>
@@ -109,8 +128,10 @@
         Evolve your brand with us.
       </Headline>
       <Headline :size="3">
-        Ready to break out of your cave and into the future? <br />
-        Let's build something legendary.
+        <span>
+          Ready to break out of your cave and into the future? <br />
+          Let's build something legendary.
+        </span>
       </Headline>
     </Chunk>
 
@@ -123,7 +144,7 @@
         >
       </div>
       <List :icon="'lucide:drama'">
-        <Card v-for="item in memes" :key="item.title">
+        <Card v-for="(item, index) in memes" :key="item.title" :index="index">
           <template #image>
             <Image :src="item.image" :expandable="true" />
           </template>
@@ -141,29 +162,27 @@
 <script setup lang="ts">
 const offering = [
   {
-    title: "Guidance",
-    description: "Our caveman, Gus, will guide you through your ux journey",
-    icon: "lucide:milestone",
+    title: "UX",
+    description: "Text about",
+    icon: "lucide:arrow-down-to-dot",
     path: "/heavy-stuff",
   },
   {
-    title: "thought process",
-    description: "Let our Gus be part of your thought process",
-    icon: "lucide:brain",
+    title: "Story telling",
+    description: "Text about story telling",
+    icon: "lucide:book-open-text",
     path: "/heavy-stuff",
   },
   {
-    title: "The heavy lifting",
-    description:
-      "Some of our cavemens are smart and some are strong. Let them do the heavy work",
+    title: "Branding",
+    description: "Text about branding",
+    icon: "lucide:twitter",
+    path: "/heavy-stuff",
+  },
+  {
+    title: "Implementation",
+    description: "Implementation",
     icon: "lucide:biceps-flexed",
-    path: "/heavy-stuff",
-  },
-  {
-    title: "Holding hands",
-    description:
-      "Some of our cavemens are smart and some are strong. Let them do the heavy work",
-    icon: "lucide:handshake",
     path: "/heavy-stuff",
   },
 ];
@@ -221,10 +240,6 @@ const memes = [
 </script>
 
 <style scoped>
-.ml-50dvw {
-  margin-left: calc(50% - 50vw);
-}
-
 .rotate {
   animation: rotate 20s linear infinite;
 }
@@ -253,6 +268,35 @@ const memes = [
   }
   50% {
     scale: 0.5;
+  }
+}
+
+.neon {
+  color: #fff;
+  /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(255, 0, 157), 0 0 82px rgb(255, 0, 157),
+    0 0 92px rgb(255, 0, 157), 0 0 102px rgb(255, 0, 157),
+    0 0 151px rgb(255, 0, 157); */
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+      0 0 42px rgb(255, 0, 157), 0 0 82px rgb(255, 0, 157),
+      0 0 92px rgb(255, 0, 157), 0 0 102px rgb(255, 0, 157),
+      0 0 151px rgb(255, 0, 157);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
   }
 }
 </style>

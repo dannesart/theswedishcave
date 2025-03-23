@@ -19,6 +19,13 @@
     </DropDown>
     <DropDown icon="lucide:user">
       <button
+        @click="toggleEdit"
+        class="p-2 px-4 w-full text-xl hover:bg-rose-50 hover:text-black text-left rounded-md font-semibold flex items-center gap-4"
+      >
+        <Icon name="lucide:user-pen" />
+        Edit profile
+      </button>
+      <button
         @click="logOut"
         class="p-2 px-4 w-full text-xl hover:bg-rose-50 hover:text-black text-left rounded-md font-semibold flex items-center gap-4"
       >
@@ -27,6 +34,10 @@
       </button>
     </DropDown>
   </nav>
+
+  
+
+
 </template>
 
 <script setup>
@@ -36,4 +47,5 @@ const isLogedIn = computed(() => !!user.value);
 const logOut = async () => {
   await client.auth.signOut();
 };
+const toggleEdit = async () => {};
 </script>

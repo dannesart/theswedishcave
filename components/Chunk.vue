@@ -7,7 +7,7 @@
       'bg-black': bg === 'black',
     }"
   >
-    <div class="grid gap-12 2xl:w-3/4 mx-auto">
+    <div class="grid gap-12 2xl:w-5/6 mx-auto">
       <slot />
     </div>
   </section>

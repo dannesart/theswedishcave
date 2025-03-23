@@ -5,7 +5,7 @@
       class="flex justify-center items-center p-5 rounded-full"
       v-wave
       :class="{
-        'text-rose-950': liked,
+        'text-green-950': liked,
         'text-black': !liked,
       }"
     >
