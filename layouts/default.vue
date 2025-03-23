@@ -50,16 +50,14 @@
     <main class="grid gap-20 md:gap-20">
       <slot />
     </main>
-    <footer
-      class="px-4 md:px-14 py-9 flex justify-between bg-black text-rose-50 mt-20 md:mt-44"
-    >
-      <div class="flex gap-6 2xl:w-3/4 mx-auto">
+    <footer>
+      <Chunk :bg="'black'">
         <div
           class="w-24 h-24 pt-4 rounded-xl bg-rose-50 flex justify-center items-center text-black"
         >
           <Headline :size="2">SC</Headline>
         </div>
-        <div>
+        <div class="text-rose-50">
           <Headline :size="4"> Well that's it folks! </Headline>
           <p>hey@sc.rocks</p>
           <p>🔥 Join the Tribe</p>
@@ -67,7 +65,7 @@
             <NuxtLink :to="'/auth'">Log in</NuxtLink>
           </p>
         </div>
-      </div>
+      </Chunk>
     </footer>
   </div>
 </template>
