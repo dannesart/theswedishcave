@@ -169,25 +169,26 @@
 const offering = [
   {
     title: "UX",
-    description: "Text about",
+    description:
+      "Great UX isn’t just pretty—it’s seamless, intuitive, and makes users want to stay.",
     icon: "lucide:arrow-down-to-dot",
     path: "/heavy-stuff",
   },
   {
     title: "Story telling",
-    description: "Text about story telling",
+    description: "Let’s tell your story the way it deserves to be told. ",
     icon: "lucide:book-open-text",
     path: "/heavy-stuff",
   },
   {
     title: "Branding",
-    description: "Text about branding",
+    description: "Ready to evolve? Let’s make your brand legendary. 🔥",
     image: "dress-in-pink.png",
     path: "/heavy-stuff",
   },
   {
     title: "Implementation",
-    description: "Implementation",
+    description: "Let’s bring your vision to life. 🚀",
     icon: "lucide:biceps-flexed",
     path: "/heavy-stuff",
   },

@@ -7,10 +7,17 @@
         :to="'/'"
         class="hover:text-rose-50 text-4xl font-bebas group relative"
       >
-        <span class="relative z-10">
-          the<br />
-          swedish<br />
-          cave
+        <span class="relative z-10 grid gap-0">
+          <div class="flex gap-2 items-center">
+            <small>the</small>
+            swedish
+          </div>
+          <div class="flex justify-between gap-4 pl-2">
+            <div
+              class="bg-black h-8 flex-1 rounded-t-xl group-hover:bg-rose-50"
+            ></div>
+            <small>cave</small>
+          </div>
         </span>
         <div
           class="absolute bg-rose-400 inset-0 scale-y-0 transition-all group-hover:scale-y-100 origin-bottom"
