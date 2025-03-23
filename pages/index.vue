@@ -81,7 +81,13 @@
             <div
               class="rounded-xl h-full flex justify-center items-center bg-black"
             >
-              <Icon :name="item.icon" :class="'text-rose-50'" :size="100" />
+              <Icon
+                v-if="item.icon"
+                :name="item.icon"
+                :class="'text-rose-50'"
+                :size="100"
+              />
+              <Image v-if="item.image" :src="item.image" />
             </div>
           </template>
           <template #title> {{ item.title }} </template>
@@ -176,7 +182,7 @@ const offering = [
   {
     title: "Branding",
     description: "Text about branding",
-    icon: "lucide:twitter",
+    image: "dress-in-pink.png",
     path: "/heavy-stuff",
   },
   {

@@ -1,10 +1,10 @@
 <template>
   <div
-    class="rounded-xl overflow-hidden h-full flex justify-center items-center bg-black group cursor-pointer"
+    class="rounded-xl overflow-hidden h-full w-full flex justify-center items-center bg-black group cursor-pointer"
   >
     <img
       :src="src"
-      class="h-full group-hover:scale-125 transition-transform"
+      class="object-cover group-hover:scale-125 transition-transform"
       @click="handleClick"
     />
   </div>
