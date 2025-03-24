@@ -76,7 +76,7 @@ const showMenu = ref(false);
 const menu = [
   { name: "Cave", path: "/" },
   { name: "Campfire", path: "/campfire" },
-  { name: "Heavy stuff", path: "/heavy-stuff" },
+  { name: "Services", path: "/services" },
   { name: "Tribe", path: "/tribe" },
 ];
 </script>

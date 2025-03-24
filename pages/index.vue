@@ -73,8 +73,8 @@
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Services</Headline>
         <Headline :size="3"
-          >Branding, Design, and UX Optimization – because your brand deserves
-          more than just a loincloth
+          >Branding, Design, and UX Optimization <br />
+          — because your brand deserves more than just a loincloth
         </Headline>
       </div>
       <List :icon="'lucide:hand-heart'">
@@ -152,8 +152,8 @@
       <div class="grid gap-8">
         <Headline :size="2" :underline="true">Memes</Headline>
         <Headline :size="3"
-          >Need a laugh while your brand gets revamped? We got memes and
-          madness. Let’s have some fun.</Headline
+          >Need a laugh while your brand gets revamped? <br />
+          We got memes and madness. Let’s have some fun.</Headline
         >
       </div>
       <List :icon="'lucide:drama'">
@@ -184,25 +184,25 @@ const offering = [
     description:
       "Great UX isn’t just pretty—it’s seamless, intuitive, and makes users want to stay.",
     icon: "lucide:arrow-down-to-dot",
-    path: "/heavy-stuff",
+    path: "/services#ux",
   },
   {
     title: "Story telling",
     description: "Let’s tell your story the way it deserves to be told. ",
     image: "adventure.webp",
-    path: "/heavy-stuff",
+    path: "/services#story-telling",
   },
   {
     title: "Branding",
     description: "Ready to evolve? Let’s make your brand legendary. 🔥",
     image: "dress-in-pink.png",
-    path: "/heavy-stuff",
+    path: "/services#branding",
   },
   {
     title: "Implementation",
     description: "Let’s bring your vision to life. 🚀",
     icon: "lucide:biceps-flexed",
-    path: "/heavy-stuff",
+    path: "/services#implementation",
   },
 ];
 
