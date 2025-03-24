@@ -12,8 +12,14 @@
                 class="inline-block"
                 v-gsap.whenVisible.delay-700.once.from="{ opacity: 0, x: 40 }"
               >
-                <span class="neon">b</span><span class="neon-broke">r</span
-                ><span class="neon">ands</span>
+                <template v-if="!workingNeon">
+                  <span :class="{ 'broke-neon': !workingNeon }">b</span
+                  ><span>r</span
+                  ><span :class="{ 'broke-neon': !workingNeon }">ands</span>
+                </template>
+                <template v-else>
+                  <span :class="{ neon: workingNeon }">brands </span>
+                </template>
               </p>
               <span
                 class="inline-block"
@@ -167,6 +173,11 @@
 </template>
 
 <script setup lang="ts">
+const workingNeon = ref(true);
+setTimeout(() => {
+  workingNeon.value = false;
+}, 4000);
+
 const offering = [
   {
     title: "UX",
@@ -279,13 +290,18 @@ const memes = [
   }
 }
 
-.neon {
-  color: #fff;
+.broke-neon {
   /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
     0 0 42px rgb(255, 0, 157), 0 0 82px rgb(255, 0, 157),
     0 0 92px rgb(255, 0, 157), 0 0 102px rgb(255, 0, 157),
     0 0 151px rgb(255, 0, 157); */
   animation: flicker 3s infinite alternate;
+}
+
+.neon {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fb7185,
+    0 0 82px #fb7185, 0 0 92px #fb7185, 0 0 102px #fb7185, 0 0 151px #fb7185;
 }
 
 @keyframes flicker {
@@ -296,12 +312,14 @@ const memes = [
   53%,
   57%,
   100% {
+    color: #fff;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fb7185,
       0 0 82px #fb7185, 0 0 92px #fb7185, 0 0 102px #fb7185, 0 0 151px #fb7185;
   }
   20%,
   24%,
   55% {
+    color: #fff;
     text-shadow: none;
   }
 }

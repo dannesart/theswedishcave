@@ -13,7 +13,10 @@
           </span>
         </Headline>
         <div class="hidden md:flex flex-1 justify-center items-center">
-          <Icon :name="'lucide:biceps-flexed'" :size="200" />
+          <div class="md:h-96 md:w-96">
+            <!-- <Icon :name="'lucide:biceps-flexed'" :size="200" /> -->
+            <Image :src="'dress-in-pink.png'" />
+          </div>
         </div>
       </section>
     </Chunk>
