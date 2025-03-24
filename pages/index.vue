@@ -189,7 +189,7 @@ const offering = [
   {
     title: "Story telling",
     description: "Let’s tell your story the way it deserves to be told. ",
-    icon: "lucide:book-open-text",
+    image: "adventure.webp",
     path: "/heavy-stuff",
   },
   {
