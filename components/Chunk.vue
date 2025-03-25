@@ -3,7 +3,7 @@
     class="px-4 md:px-14 py-10 md:py-20"
     :class="{
       'bg-amber-50': bg === 'amber',
-      'bg-rose-50': bg === 'rose',
+      'bg-brand-50': bg === 'rose',
       'bg-black': bg === 'black',
     }"
   >

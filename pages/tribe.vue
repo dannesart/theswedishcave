@@ -30,7 +30,7 @@
         <Card>
           <template v-slot:image>
             <div
-              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+              class="rounded-xl h-full flex justify-center items-center bg-black text-brand-50"
             >
               <Image :src="'gus.webp'" :expandable="false" />
             </div>
@@ -45,7 +45,7 @@
         <Card>
           <template v-slot:image>
             <div
-              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+              class="rounded-xl h-full flex justify-center items-center bg-black text-brand-50"
             >
               <Image :src="'melvin.webp'" :expandable="false" />
             </div>
@@ -59,7 +59,7 @@
         <Card>
           <template v-slot:image>
             <div
-              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+              class="rounded-xl h-full flex justify-center items-center bg-black text-brand-50"
             >
               <Image :src="'mira.webp'" :expandable="false" />
             </div>
@@ -73,7 +73,7 @@
         <Card>
           <template v-slot:image>
             <div
-              class="rounded-xl h-full flex justify-center items-center bg-black text-rose-50"
+              class="rounded-xl h-full flex justify-center items-center bg-black text-brand-50"
             >
               Missing cave painting
             </div>

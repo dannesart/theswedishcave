@@ -23,7 +23,7 @@ const variantClass = computed(() => {
 
 <style>
 .primary {
-  @apply bg-rose-200 hover:bg-rose-300 text-rose-950;
+  @apply bg-brand-200 hover:bg-brand-300 text-brand-950;
 }
 .secondary {
   @apply bg-blue-950 hover:bg-blue-800 text-white;

@@ -1,12 +1,12 @@
 <template>
   <article
-    class="grid grid-rows-[12rem_2.5rem_5rem_auto] gap-4 w-full card"
+    class="grid grid-rows-[1fr_2.5rem_5rem_auto] gap-4 w-full card"
     v-gsap.whenVisible.once.from="{
       scale: 0.2,
       delay: (index || 0) * 0.1,
     }"
   >
-    <div v-if="$slots.image" class="h-48">
+    <div v-if="$slots.image" class="aspect-square">
       <slot name="image" />
     </div>
     <header v-if="$slots.title">
@@ -22,7 +22,7 @@
       :to="link.path"
       :class="'text-2xl inline-flex max-w-fit flex-col gap-2 font-antonio group'"
     >
-      <div class="flex items-center gap-2 group-hover:text-rose-400">
+      <div class="flex items-center gap-2 group-hover:text-brand-400">
         {{ link.label }}
         <Icon name="lucide:arrow-right" size="30" />
       </div>

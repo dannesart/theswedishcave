@@ -91,7 +91,7 @@
               <Icon
                 v-if="item.icon"
                 :name="item.icon"
-                :class="'text-rose-50'"
+                :class="'text-brand-50'"
                 :size="100"
               />
               <Image v-if="item.image" :src="item.image" />

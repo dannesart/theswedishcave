@@ -9,5 +9,5 @@
 
 
   ::selection {
-    @apply bg-rose-400 text-white;
+    @apply bg-brand-400 text-white;
 }

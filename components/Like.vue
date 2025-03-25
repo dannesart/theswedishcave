@@ -19,7 +19,7 @@
       v-wave
       class="flex justify-center items-center p-5 rounded-full"
       :class="{
-        'text-rose-950': disliked,
+        'text-brand-950': disliked,
         'text-black': !disliked,
       }"
     >

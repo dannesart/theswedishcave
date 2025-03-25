@@ -1,6 +1,6 @@
 <template>
   <button
-    class="min-w-14 h-14 text-2xl rounded-full flex items-center justify-center bg-rose-50 text-black"
+    class="min-w-14 h-14 text-2xl rounded-full flex items-center justify-center bg-brand-50 text-black"
     @mouseenter="handleHover"
     ref="dropDownBtn"
     :popovertarget="dropid"

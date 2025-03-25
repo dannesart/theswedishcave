@@ -13,7 +13,7 @@
       @blur="handleBlur"
       class="h-[72px] rounded-xl text-2xl w-full peer pr-4"
       :class="{
-        'bg-rose-100': notValid,
+        'bg-brand-100': notValid,
         'bg-gray-100 outline-gray-300': !notValid && variant === 'gray',
         'bg-white disabled:bg-gray-100 outline-gray-300 border-2 border-gray-100':
           !notValid && variant === 'white',
