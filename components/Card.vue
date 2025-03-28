@@ -1,6 +1,6 @@
 <template>
   <article
-    class="grid grid-rows-[1fr_2.5rem_5rem_auto] gap-4 w-full card"
+    class="grid grid-rows-[1fr_2.5rem_5rem_auto] gap-4 card flex-1 w-full"
     v-gsap.whenVisible.once.from="{
       scale: 0.2,
       delay: (index || 0) * 0.1,
@@ -9,7 +9,7 @@
     <div v-if="$slots.image" class="aspect-square">
       <slot name="image" />
     </div>
-    <header v-if="$slots.title">
+    <header v-if="$slots.title" class="w-full overflow-hidden">
       <Headline :size="4">
         <slot name="title" />
       </Headline>

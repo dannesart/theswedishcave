@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     "@nuxtjs/supabase",
     "nuxt-mongoose",
     "v-gsap-nuxt",
+    "@pinia/nuxt",
   ],
   runtimeConfig: {
     BASE_URL: process.env.BASE_URL,

@@ -59,15 +59,35 @@
 @keyframes movement {
   0% {
   }
-  10%,
-  100% {
-    transform: rotate(130deg);
+  10% {
+    transform: rotate(100deg);
   }
   10% {
-    translate: 0 20rem;
+    translate: 5rem 20rem;
   }
   20% {
-    translate: 0 30rem;
+    translate: 10rem 30rem;
+    transform: rotate(100deg);
+  }
+  25% {
+    translate: 20rem 40rem;
+    transform: rotate(80deg);
+  }
+  30% {
+    translate: 20rem 50rem;
+    transform: rotate(130deg);
+  }
+  35% {
+    translate: 20rem 70rem;
+    transform: rotate(130deg);
+  }
+  40% {
+    translate: 20rem 90rem;
+    transform: rotate(130deg);
+  }
+  100% {
+    translate: 20rem 270rem;
+    transform: rotate(130deg);
   }
 }
 

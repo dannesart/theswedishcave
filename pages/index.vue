@@ -117,16 +117,22 @@
         </div>
         <List :icon="'lucide:flame'">
           <Card
-            v-for="(item, index) in tales"
+            v-for="(item, index) in stories"
             :key="item.title"
-            :link="{ label: 'Read more', path: item.path }"
+            :link="{ label: 'Read more', path: '/campfire#' + item.title }"
             :index="index"
           >
             <template #image>
               <div
                 class="rounded-xl h-full flex justify-center items-center bg-black"
               >
-                <Icon :name="item.icon" :class="'text-amber-50'" :size="100" />
+                <Icon
+                  name="lucide:flame"
+                  v-if="!item.image"
+                  :class="'text-amber-50'"
+                  :size="100"
+                />
+                <Image v-if="item.image" :src="item.image" />
               </div>
             </template>
             <template #title> {{ item.title }} </template>
@@ -159,7 +165,7 @@
       <List :icon="'lucide:drama'">
         <Card v-for="(item, index) in memes" :key="item.title" :index="index">
           <template #image>
-            <Image :src="item.image" :expandable="true" />
+            <Image :src="item.image" :expandable="false" />
           </template>
           <template #title> {{ item.title }} </template>
           <p>{{ item.description }}</p>
@@ -173,6 +179,8 @@
 </template>
 
 <script setup lang="ts">
+const storiesStore = useStoriesStore();
+const { stories } = storeToRefs(storiesStore);
 const workingNeon = ref(true);
 setTimeout(() => {
   workingNeon.value = false;
@@ -183,7 +191,7 @@ const offering = [
     title: "UX",
     description:
       "Great UX isn’t just pretty—it’s seamless, intuitive, and makes users want to stay.",
-    icon: "lucide:arrow-down-to-dot",
+    image: "ux-2.webp",
     path: "/services#ux",
   },
   {
@@ -201,36 +209,8 @@ const offering = [
   {
     title: "Implementation",
     description: "Let’s bring your vision to life. 🚀",
-    icon: "lucide:biceps-flexed",
+    image: "drag.webp",
     path: "/services#implementation",
-  },
-];
-
-const tales = [
-  {
-    title: "When we first met fire",
-    description: "Our cavemens offer guidance through your ux journey",
-    icon: "lucide:fire-extinguisher",
-    path: "/heavy-stuff",
-  },
-  {
-    title: "Journey to space",
-    description: "Let our brilliant cavemen be part of your thought process",
-    icon: "lucide:rocket",
-    path: "/heavy-stuff",
-  },
-  {
-    title: "Boxing against sharks",
-    description:
-      "Some of our cavemens are smart and some are strong. Let them do the heavy work",
-    icon: "lucide:fish",
-    path: "/heavy-stuff",
-  },
-  {
-    title: "Dancing with dinosaurs",
-    description: "Dance off with dinosaurs. Our cavemens are the best",
-    icon: "lucide:turtle",
-    path: "/heavy-stuff",
   },
 ];
 
