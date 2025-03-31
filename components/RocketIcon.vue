@@ -87,6 +87,7 @@
   }
   100% {
     translate: 20rem 270rem;
+    scale: 0.6;
     transform: rotate(130deg);
   }
 }

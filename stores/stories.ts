@@ -1,3 +1,5 @@
+import axios from "axios";
+
 type Story = {
   title: string;
   body: string[];
@@ -18,6 +20,22 @@ export const useStoriesStore = defineStore("stories", {
     stories: (state) => state._stories,
   },
   actions: {
+    async newStory(title: string, body: Array<string>) {
+      try {
+        const config = useRuntimeConfig();
+        const response = await axios.post(
+          config.public.BASE_URL + "/api/story",
+          {
+            title,
+            body,
+          }
+        );
+        if (response.data) {
+          this._stories.unshift(response.data);
+          this._stories.length = 4;
+        }
+      } catch (error) {}
+    },
     async fetchStories() {
       const stories: Story[] = [
         {
@@ -152,6 +170,15 @@ export const useStoriesStore = defineStore("stories", {
           ],
         },
       ];
+      try {
+        const config = useRuntimeConfig();
+        const response = await axios.get(
+          config.public.BASE_URL + "/api/story/"
+        );
+        if (response.data) {
+          console.log("stories: ", response.data);
+        }
+      } catch (error) {}
       this._stories = stories;
     },
   },

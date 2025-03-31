@@ -12,6 +12,7 @@
       </button>
       <button
         class="p-2 px-4 w-full text-xl hover:bg-brand-50 hover:text-black text-left rounded-md font-semibold flex items-center gap-4"
+        @click="newStoryModal.openModal()"
       >
         <Icon name="lucide:flame" />
         New story
@@ -34,6 +35,34 @@
       </button>
     </DropDown>
   </nav>
+  <Modal ref="newStoryModal">
+    <template #header> New story </template>
+    <div class="grid gap-6">
+      <Input
+        :type="'text'"
+        :label="'Title'"
+        :icon="'lucide:text'"
+        :required="true"
+      />
+      <Input
+        :type="'body'"
+        :label="'Story'"
+        :icon="'lucide:text'"
+        :required="false"
+      />
+      <!-- <Input
+        :type="'file'"
+        :label="'Image'"
+        :icon="'lucide:image'"
+        :required="false"
+      /> -->
+    </div>
+    <template #footer>
+      <Button @click="createStory()" :loading="creatingNewStory"
+        >Create story</Button
+      >
+    </template>
+  </Modal>
 </template>
 
 <script setup>
@@ -43,5 +72,12 @@ const isLogedIn = computed(() => !!user.value);
 const logOut = async () => {
   await client.auth.signOut();
 };
+const newStoryModal = ref();
+const creatingNewStory = ref(false);
+
 const toggleEdit = async () => {};
+
+const createStory = () => {
+  creatingNewStory.value = true;
+};
 </script>

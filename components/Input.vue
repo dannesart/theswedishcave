@@ -2,6 +2,7 @@
   <div class="relative">
     <input
       :type="type"
+      v-if="type !== 'body' && type !== 'file'"
       :required="required"
       :max="max"
       :disabled="disabled || loading"
@@ -11,7 +12,7 @@
       :id="id"
       @input="updateValue($event)"
       @blur="handleBlur"
-      class="h-[72px] rounded-xl text-2xl w-full peer pr-4"
+      class="h-[72px] rounded-xl text-2xl w-full peer pr-4 appearance-none"
       :class="{
         'bg-brand-100': notValid,
         'bg-gray-100 outline-gray-300': !notValid && variant === 'gray',
@@ -21,6 +22,27 @@
         'pt-4': !!label,
       }"
     />
+    <textarea
+      v-if="type === 'body'"
+      :required="required"
+      class="h-48 rounded-xl text-2xl w-full peer pr-4"
+      :class="{
+        'bg-brand-100': notValid,
+        'bg-gray-100 outline-gray-300': !notValid && variant === 'gray',
+        'bg-white disabled:bg-gray-100 outline-gray-300 border-2 border-gray-100':
+          !notValid && variant === 'white',
+        'pl-16': !!icon,
+        'pt-8': !!label,
+      }"
+      @input="updateValue($event)"
+      @blur="handleBlur"
+      :max="max"
+      :disabled="disabled || loading"
+      placeholder=""
+      :value="valueRef"
+      :autofocus="autofocus"
+      :id="id"
+    ></textarea>
     <label
       v-if="label"
       :for="id"
@@ -48,7 +70,7 @@
 import { z } from "zod";
 
 type Props = {
-  type?: "text" | "number" | "email";
+  type?: "text" | "number" | "email" | "body" | "file";
   required?: boolean;
   disabled?: boolean;
   min?: number;
