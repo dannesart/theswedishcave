@@ -1,34 +1,36 @@
 <template>
-  <div class="relative">
-    <input
-      :type="type"
+  <div
+    class="h-48 rounded-xl text-2xl w-full pr-4 relative flex flex-col-reverse"
+    :class="{
+      'bg-brand-100': notValid,
+      'bg-gray-100 outline-gray-300': !notValid && variant === 'gray',
+      'bg-white disabled:bg-gray-100 outline-gray-300 border-2 border-gray-100':
+        !notValid && variant === 'white',
+      'pl-16': !!icon,
+      'pt-1': !!label,
+    }"
+  >
+    <textarea
       :required="required"
+      class="bg-transparent border-0 flex-1 w-full peer outline-none"
+      @input="updateValue($event)"
+      @blur="handleBlur"
       :max="max"
       :disabled="disabled || loading"
       placeholder=""
       :value="valueRef"
       :autofocus="autofocus"
       :id="id"
-      @input="updateValue($event)"
-      @blur="handleBlur"
-      class="h-[72px] rounded-xl text-2xl w-full peer pr-4 appearance-none"
-      :class="{
-        'bg-brand-100': notValid,
-        'bg-gray-100 outline-gray-300': !notValid && variant === 'gray',
-        'bg-white disabled:bg-gray-100 outline-gray-300 border-2 border-gray-100':
-          !notValid && variant === 'white',
-        'pl-16': !!icon,
-        'pt-4': !!label,
-      }"
-    />
+    ></textarea>
 
     <label
       v-if="label"
       :for="id"
-      class="absolute duration-300 top-5 left-16 text-gray-400 text-xl origin-[0] scale-75 -translate-y-4 peer-focus:-translate-y-4 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-placeholder-shown:translate-y-0"
+      class="duration-300 text-gray-400 text-xl origin-[0] scale-75 translate-y-0 peer-focus:-translate-y-0 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-placeholder-shown:translate-y-4"
       >{{ label }}
       {{ !required ? "(optional)" : "" }}
     </label>
+
     <Icon v-if="icon" :name="icon" size="30" class="absolute left-5 top-5" />
     <div
       v-if="disabled"
@@ -44,10 +46,8 @@
     />
   </div>
 </template>
-
 <script setup lang="ts">
 type Props = {
-  type?: "text" | "number" | "email";
   required?: boolean;
   disabled?: boolean;
   min?: number;
@@ -61,7 +61,6 @@ type Props = {
   loading?: boolean;
 };
 const {
-  type = "text",
   required = false,
   label = "",
   disabled = false,

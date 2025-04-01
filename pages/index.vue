@@ -182,9 +182,9 @@
 const storiesStore = useStoriesStore();
 const { stories } = storeToRefs(storiesStore);
 const workingNeon = ref(true);
-setTimeout(() => {
-  workingNeon.value = false;
-}, 4000);
+// setTimeout(() => {
+//   workingNeon.value = false;
+// }, 4000);
 
 const offering = [
   {
@@ -239,6 +239,9 @@ const memes = [
 </script>
 
 <style scoped>
+:root {
+  --color-brand: #eab308;
+}
 .rotate {
   animation: rotate 20s linear infinite;
 }
@@ -279,10 +282,20 @@ const memes = [
 }
 
 .neon {
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fb7185,
-    0 0 82px #fb7185, 0 0 92px #fb7185, 0 0 102px #fb7185, 0 0 151px #fb7185;
+  --brand: #fde047;
+  @apply relative text-brand-50;
+  /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fb7185,
+    0 0 82px #fb7185, 0 0 92px #fb7185, 0 0 102px #fb7185, 0 0 151px #fb7185; */
+  /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ca8a04,
+    0 0 82px #ca8a04, 0 0 92px #ca8a04, 0 0 102px #ca8a04, 0 0 151px #ca8a04; */
+  text-shadow: 0px 0px 3px var(--brand), 0px 0px 2px #fff, 0px 0px 10px #fff,
+    0px 0px 10px var(--brand), 0px 0px 20px var(--brand),
+    0px 0px 50px var(--brand), 0px 0px 100px var(--brand), 0px 0px 500px #fff;
 }
+/* .neon:after {
+  content: "";
+  @apply bg-brand-500 absolute inset-x-0 inset-6 -z-10;
+} */
 
 @keyframes flicker {
   0%,

@@ -44,12 +44,7 @@
         :icon="'lucide:text'"
         :required="true"
       />
-      <Input
-        :type="'body'"
-        :label="'Story'"
-        :icon="'lucide:text'"
-        :required="false"
-      />
+      <Textarea :label="'Story'" :icon="'lucide:text'" :required="false" />
       <!-- <Input
         :type="'file'"
         :label="'Image'"

@@ -36,7 +36,7 @@ export default defineNuxtConfig({
             bebas: ["Bebas Neue"],
           },
           colors: {
-            brand: colors.rose,
+            brand: colors.yellow,
           },
         },
       },
