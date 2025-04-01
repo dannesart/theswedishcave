@@ -203,7 +203,7 @@ const offering = [
   {
     title: "Branding",
     description: "Ready to evolve? Let’s make your brand legendary. 🔥",
-    image: "dress-in-pink.png",
+    image: "dress-in-yellow.png",
     path: "/services#branding",
   },
   {
