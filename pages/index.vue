@@ -165,7 +165,7 @@
       <List :icon="'lucide:drama'">
         <Card v-for="(item, index) in memes" :key="item.title" :index="index">
           <template #image>
-            <Image :src="item.image" :expandable="false" />
+            <Image :src="item.image" :expandable="true" />
           </template>
           <template #title> {{ item.title }} </template>
           <p>{{ item.description }}</p>

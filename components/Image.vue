@@ -8,14 +8,9 @@
       @click="handleClick"
     />
   </div>
-  <div
-    v-if="expandable"
-    class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-    v-show="expanded"
-    @click="expanded = false"
-  >
+  <Modal v-if="expandable" ref="modal">
     <img :src="src" class="max-h-full max-w-full" />
-  </div>
+  </Modal>
 </template>
 
 <script setup lang="ts">
@@ -26,10 +21,12 @@ type Props = {
 const { src, expandable = false } = defineProps<Props>();
 
 const expanded = ref(false);
+const modal = ref();
 
 const handleClick = () => {
   if (expandable) {
-    expanded.value = !expanded.value;
+    modal.value.openModal();
+    // expanded.value = !expanded.value;
   }
 };
 </script>
