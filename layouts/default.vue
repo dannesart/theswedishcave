@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-svh bg-brand-200">
+  <div class="flex flex-col min-h-svh bg-brand-500">
     <UserNav />
 
     <header class="px-4 md:px-14 py-9 flex justify-between">
