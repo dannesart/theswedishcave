@@ -19,6 +19,7 @@
           </div>
         </div>
       </section>
+      <Bento />
     </Chunk>
   </NuxtLayout>
 </template>

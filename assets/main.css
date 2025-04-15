@@ -11,3 +11,7 @@
   ::selection {
     @apply bg-brand-400 text-white;
 }
+
+* {
+    @apply text-brand-200;
+}

@@ -1,21 +1,16 @@
 <template>
-  <div class="flex flex-col min-h-svh bg-brand-500">
+  <div class="flex flex-col min-h-svh bg-dark-950">
     <UserNav />
 
     <header class="px-4 md:px-14 py-9 flex justify-between">
       <nuxt-link
         :to="'/'"
-        class="hover:text-brand-50 text-4xl font-bebas group relative"
+        class="hover:text-brand-50 text-5xl font-bebas group relative"
       >
         <span class="relative z-10 grid gap-0">
-          <div class="flex gap-2 items-center">
-            <small>the</small>
-            swedish
-          </div>
-          <div class="flex justify-between gap-4 pl-2">
-            <div
-              class="bg-black h-8 flex-1 rounded-t-xl group-hover:bg-brand-50"
-            ></div>
+          <div class="flex gap-2 items-center">the</div>
+          <div class="text-2xl">swedish</div>
+          <div class="flex justify-between gap-4">
             <small>cave</small>
           </div>
         </span>

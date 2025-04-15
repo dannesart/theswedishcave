@@ -37,6 +37,8 @@ export default defineNuxtConfig({
           },
           colors: {
             brand: colors.emerald,
+            accent: colors.amber,
+            dark: colors.slate,
           },
         },
       },
@@ -48,7 +50,7 @@ export default defineNuxtConfig({
     redirectOptions: {
       login: "/auth",
       callback: "/",
-      exclude: ["/", "/campfire", "/heavy-stuff", "/tribe"],
+      exclude: ["/", "/campfire", "/services", "/tribe"],
     },
   },
 });

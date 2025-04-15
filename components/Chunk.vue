@@ -2,7 +2,7 @@
   <section
     class="px-4 md:px-14 py-10 md:py-20"
     :class="{
-      'bg-amber-50': bg === 'amber',
+      'bg-amber-950': bg === 'amber',
       'bg-brand-50': bg === 'rose',
       'bg-black': bg === 'black',
     }"
