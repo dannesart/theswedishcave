@@ -35,7 +35,7 @@
     </div>
 
     <!-- Second Row -->
-    <div class="col-span-4 rounded-lg bg-black/25 overflow-hidden">
+    <div class="col-span-4 rounded-lg bg-black/25 overflow-hidden relative">
       <slot name="large-3" />
     </div>
     <div

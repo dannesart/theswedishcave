@@ -12,9 +12,7 @@
           </Headline>
         </template>
         <template v-slot:right>
-          <div class="hidden md:flex flex-1 justify-center items-center">
-            <FireIcon />
-          </div>
+          <Image :src="'cat-walk.png'" />
         </template>
       </Hero>
     </Chunk>

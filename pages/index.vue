@@ -132,7 +132,7 @@
             </div>
           </template>
           <template #small-2>
-            <Image v-if="offering[2]?.image" :src="offering[2].image" />
+            <Image v-if="offering[1]?.image" :src="offering[1].image" />
           </template>
           <template #small-3>
             <Image v-if="offering[3]?.image" :src="offering[3].image" />
@@ -147,18 +147,24 @@
               </p>
             </div>
           </template>
-          <template #large-2></template>
+          <template #large-2>
+            <Image :src="'cat-walk.png'" />
+          </template>
           <template #large-3>
-            <div class="w-full h-full bg-brand-800 p-6">
+            <div class="absolute inset-0">
+              <Image :src="'coffee-sketch.png'" />
+            </div>
+          </template>
+          <template #large-4>
+            <div
+              class="w-full h-full bg-brand-800 p-6 flex justify-center items-center"
+            >
               <Headline :size="1" :underline="false">
                 <span class="text-accent-300"
                   >Carpe diem or what ever</span
                 ></Headline
               >
             </div>
-          </template>
-          <template #large-4>
-            <Image v-if="offering[1]?.image" :src="offering[1].image" />
           </template>
         </Bento>
         <!-- <List :icon="'lucide:flame'">
