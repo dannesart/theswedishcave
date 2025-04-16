@@ -103,7 +103,7 @@
       </List>
     </Chunk>
 
-    <Chunk :bg="'amber'">
+    <Chunk :bg="'brand'">
       <div class="grid gap-12 relative z-10">
         <div class="grid gap-8">
           <Headline :size="2" :underline="true">Campfire</Headline>
@@ -115,7 +115,24 @@
             strategy.</Headline
           >
         </div>
-        <List :icon="'lucide:flame'">
+        <Bento>
+          <template #large-1>
+            <Image v-if="stories[0].image" :src="stories[0].image" />
+          </template>
+          <template #small-1>
+            <Image v-if="offering[1]?.image" :src="offering[1].image" />
+          </template>
+          <template #small-2>
+            <Image v-if="offering[2]?.image" :src="offering[2].image" />
+          </template>
+          <template #small-3>
+            <Image v-if="offering[3]?.image" :src="offering[3].image" />
+          </template>
+          <template #small-4>
+            <Image v-if="offering[0]?.image" :src="offering[0].image" />
+          </template>
+        </Bento>
+        <!-- <List :icon="'lucide:flame'">
           <Card
             v-for="(item, index) in stories"
             :key="item.title"
@@ -138,7 +155,7 @@
             <template #title> {{ item.title }} </template>
             <Text>{{ item.description }}</Text>
           </Card>
-        </List>
+        </List> -->
       </div>
     </Chunk>
 

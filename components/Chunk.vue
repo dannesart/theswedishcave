@@ -3,6 +3,7 @@
     class="px-4 md:px-14 py-10 md:py-20"
     :class="{
       'bg-amber-950': bg === 'amber',
+      'bg-brand-950': bg === 'brand',
       'bg-brand-50': bg === 'rose',
       'bg-black': bg === 'black',
     }"
@@ -15,7 +16,7 @@
 
 <script setup lang="ts">
 type Props = {
-  bg?: "amber" | "rose" | "black";
+  bg?: "amber" | "rose" | "black" | "brand";
 };
 
 const { bg } = defineProps<Props>();
