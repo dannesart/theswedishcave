@@ -88,12 +88,6 @@
             <div
               class="rounded-xl h-full flex justify-center items-center bg-black"
             >
-              <Icon
-                v-if="item.icon"
-                :name="item.icon"
-                :class="'text-brand-50'"
-                :size="100"
-              />
               <Image v-if="item.image" :src="item.image" />
             </div>
           </template>
@@ -117,10 +111,25 @@
         </div>
         <Bento>
           <template #large-1>
-            <Image v-if="stories[0].image" :src="stories[0].image" />
+            <div class="flex flex-col gap-6 p-6">
+              <Headline :size="2" :underline="false">
+                <span class="text-accent-300"
+                  >We are the ones that takes the fight</span
+                ></Headline
+              >
+            </div>
           </template>
           <template #small-1>
-            <Image v-if="offering[1]?.image" :src="offering[1].image" />
+            <div
+              class="w-full h-full flex flex-col justify-center items-center gap-3"
+            >
+              <h2 class="text-3xl font-bold text-center">Join the tribe</h2>
+              <p class="text-center">
+                We’re not just a team; we’re a tribe. <br />
+                We’re all about collaboration, creativity, and a sprinkle of
+                madness.
+              </p>
+            </div>
           </template>
           <template #small-2>
             <Image v-if="offering[2]?.image" :src="offering[2].image" />
@@ -129,7 +138,27 @@
             <Image v-if="offering[3]?.image" :src="offering[3].image" />
           </template>
           <template #small-4>
-            <Image v-if="offering[0]?.image" :src="offering[0].image" />
+            <div
+              class="w-full h-full flex flex-col justify-between items-end p-4"
+            >
+              <p class="text-xs">59.334591°N, 18.063240°W</p>
+              <p class="text-3xl">
+                {{ now }}
+              </p>
+            </div>
+          </template>
+          <template #large-2></template>
+          <template #large-3>
+            <div class="w-full h-full bg-brand-800 p-6">
+              <Headline :size="1" :underline="false">
+                <span class="text-accent-300"
+                  >Carpe diem or what ever</span
+                ></Headline
+              >
+            </div>
+          </template>
+          <template #large-4>
+            <Image v-if="offering[1]?.image" :src="offering[1].image" />
           </template>
         </Bento>
         <!-- <List :icon="'lucide:flame'">
@@ -202,6 +231,15 @@ const workingNeon = ref(true);
 // setTimeout(() => {
 //   workingNeon.value = false;
 // }, 4000);
+
+const now = computed(() => {
+  const date = new Date();
+  return date.toLocaleString("sv-SE", {
+    timeZone: "Europe/Stockholm",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+});
 
 const offering = [
   {
