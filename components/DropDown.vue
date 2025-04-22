@@ -1,6 +1,6 @@
 <template>
   <button
-    class="min-w-14 h-14 text-2xl rounded-full flex items-center justify-center bg-brand-50 text-black"
+    class="min-w-14 h-14 text-2xl rounded-full flex items-center justify-center text-white bg-dark-950"
     @mouseenter="handleHover"
     ref="dropDownBtn"
     :popovertarget="dropid"
@@ -10,7 +10,7 @@
     <span v-if="label">{{ label }}</span>
   </button>
   <div
-    class="bg-white text-black p-4 rounded-lg w-fit shadow-lg"
+    class="bg-dark-900 text-white p-4 rounded-lg w-fit shadow-lg"
     ref="dropDown"
     :id="dropid"
     popover

@@ -1,7 +1,7 @@
 <template>
   <dialog
     ref="modal"
-    class="modal bg-white rounded-lg shadow-lg w-11/12 max-w-2xl"
+    class="modal bg-dark-950 rounded-lg shadow-lg w-11/12 max-w-2xl"
     @click="handleClick"
   >
     <div class="flex flex-col">

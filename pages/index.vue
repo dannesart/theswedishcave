@@ -141,7 +141,7 @@
             <div
               class="w-full h-full flex flex-col justify-between items-end p-4"
             >
-              <p class="text-xs">59.334591°N, 18.063240°W</p>
+              <p class="text-xs">59.334591°, 18.063240°</p>
               <p class="text-3xl">
                 {{ now }}
               </p>

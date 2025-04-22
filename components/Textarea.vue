@@ -2,8 +2,10 @@
   <div
     class="h-48 rounded-xl text-2xl w-full pr-4 relative flex flex-col-reverse"
     :class="{
-      'bg-brand-100': notValid,
+      'bg-red-100': notValid && (variant === 'gray' || variant === 'white'),
+      'bg-red-900': notValid && variant === 'dark',
       'bg-gray-100 outline-gray-300': !notValid && variant === 'gray',
+      'bg-dark-900 outline-dark-400': !notValid && variant === 'dark',
       'bg-white disabled:bg-gray-100 outline-gray-300 border-2 border-gray-100':
         !notValid && variant === 'white',
       'pl-16': !!icon,
@@ -57,7 +59,7 @@ type Props = {
   value?: string | number;
   autofocus?: boolean;
   id?: string;
-  variant?: "white" | "gray";
+  variant?: "white" | "gray" | "dark";
   loading?: boolean;
 };
 const {
